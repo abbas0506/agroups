@@ -1,6 +1,10 @@
 @media only screen and (max-width: 800px) {
-    .rcol {
+    .rcol,
+    .auto-col {
         display: block;
+    }
+    .auto-col .w-48 {
+        width: 100%;
     }
     .app-header-logo {
         width: 150px;

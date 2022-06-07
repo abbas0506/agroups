@@ -15,11 +15,11 @@ class CourseSeeder extends Seeder
     public function run()
     {
         //
-        Course::create(['name' => 'Android Development']);
-        Course::create(['name' => 'Web Designing']);
+        Course::create(['name' => 'Mobile Apps']);
+        Course::create(['name' => 'Wordpress']);
         Course::create(['name' => 'Web Development']);
-        Course::create(['name' => 'Amazon Virtual Assistant']);
-        Course::create(['name' => 'Graphics Designing']);
-        Course::create(['name' => 'PPSC']);
+        Course::create(['name' => 'Amazon']);
+        Course::create(['name' => 'Graphics']);
+        Course::create(['name' => 'GK Preparation']);
     }
 }

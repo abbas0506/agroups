@@ -1283,6 +1283,10 @@ section .drivethru {
     flex-basis: 45%;
 }
 
+.w-48 {
+    width: 48%;
+}
+
 .w-50 {
     flex-basis: 50%;
 }
@@ -1473,9 +1477,13 @@ section .drivethru {
     text-align: left;
 }
 
+.fancy-pallet {
+    text-align: center;
+}
+
 .fancy-pallet p {
     line-height: 22px;
-    text-align: left;
+    text-align: center;
 }
 
 .index-page .blog ul {
@@ -1485,4 +1493,9 @@ section .drivethru {
 
 .support h3 {
     color: #224669;
+}
+
+.overlay {
+    position: relative;
+    top: 100px
 }
