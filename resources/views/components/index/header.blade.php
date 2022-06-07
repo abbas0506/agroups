@@ -3,7 +3,7 @@
       <img src="{{asset('/images/logo/logo.png')}}" alt="" href="" class='app-header-logo'>
    </a>
 
-   <div class="nav-links" id='nav-links'>
+   <!-- <div class="nav-links" id='nav-links'>
       <i data-feather="x" class="feather-small feather-red" onclick="hidemenu()"></i>
       <ul>
          <a href="/">
@@ -38,7 +38,7 @@
 
       </ul>
    </div>
-   <i data-feather="menu" id='menubars' class="feather-small feather-light" onclick="showmenu()"></i>
+   <i data-feather="menu" id='menubars' class="feather-small feather-light" onclick="showmenu()"></i> -->
 </nav>
 <div class="whatsapp-icon">
    <a href="https://wa.me/+923004103160" target="_blank">

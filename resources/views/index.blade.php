@@ -3,22 +3,17 @@
 @section('header')
 <section class="header">
    <x-index.header></x-index.header>
-   <div id="image-animator">
+   <!-- <div id="image-animator">
       <img src="{{asset('/images/bg/full/4.png')}}" alt="">
       <img src="{{asset('/images/bg/full/3.png')}}" alt="">
       <img src="{{asset('/images/bg/full/2.png')}}" alt="">
       <img src="{{asset('/images/bg/full/1.png')}}" alt="">
-   </div>
+   </div> -->
    <div class="app-msg">
       <p>We teach the best technologies of the world</p>
       <h1>Learn to earn</h1>
       <button class="btn btn-red rounded">
-         @if(session('user'))
-         <a href="{{url('/')}}">Apply Now</a>
-         @else
-         <a href="{{url('signin')}}">Apply Now</a>
-         @endif
-
+         <a href="#">Apply Now</a>
       </button>
    </div>
 </section>
@@ -34,11 +29,11 @@
          </div>
          <div class="content">
             <h1>Android Development</h1>
-            <p>Intermediate students face issues, regrading decision making about their future scope of studies, and ....</p>
+            <p>Fluter is used to teach android devevelopment</p>
          </div>
-         <a href="{{url('blog#find-university')}}" class="btn-blue">
+         <!-- <a href="{{url('blog#find-university')}}" class="btn-blue">
             Read More
-         </a>
+         </a> -->
       </div>
 
       <div class="col fancy-pallet one-third">
@@ -47,24 +42,22 @@
          </div>
          <div class="content">
             <h1>Web Designing</h1>
-            <p>Long, time consuming and complex admission forms are a bitter jump student make due to which they dont take interest ....</p>
+            <p>HTML, CSS, Bootstrap, tailwind css, Javascript, jquery </p>
          </div>
-         <a href="{{url('blog#apply-through-us')}}" class="btn-blue">
+         <!-- <a href="{{url('blog#apply-through-us')}}" class="btn-blue">
             Read More
-         </a>
+         </a> -->
 
       </div>
       <div class="col fancy-pallet one-third">
          <div class="ico">
-            <img src="{{asset('/images/icons/laptop.png')}}" alt="">
+            <img src="{{asset('/images/icons/coding.png')}}" alt="">
          </div>
          <div class="content">
             <h1>Web Development</h1>
-            <p>Long, time consuming and complex admission forms are a bitter jump student make due to which they dont take interest ....</p>
+            <p>Wordpress, core PHP and Laravel framework</p>
          </div>
-         <a href="{{url('blog#apply-through-us')}}" class="btn-blue">
-            Read More
-         </a>
+
 
       </div>
 
@@ -78,12 +71,9 @@
          </div>
          <div class="content">
             <h1>Amazon</h1>
-            <p>With less insight about the universities and without a proper career counseling, students may take
-               wrong decisions and end-up in a place where they shouldn’t be ....</p>
+            <p>Amazon Virtual Assistant using latest tools</p>
          </div>
-         <a href="{{url('blog#career-counselling')}}" class="btn-blue">
-            Read More
-         </a>
+
       </div>
       <div class="col fancy-pallet one-third">
          <div class="ico">
@@ -91,24 +81,19 @@
          </div>
          <div class="content">
             <h1>Graphics Designing</h1>
-            <p>We do not charge anything for providing information. We charge $1 ($1=150/-) per
-               university only for the applying process. There are no hidden charges included ....</p>
+            <p>Adobe XD, Illustrtor</p>
          </div>
-         <a href="{{url('blog#faq')}}" class="btn-blue">
-            Read More
-         </a>
+
       </div>
       <div class="col fancy-pallet one-third">
          <div class="ico">
             <img src="{{asset('/images/icons/ppsc.png')}}" alt="">
          </div>
          <div class="content">
-            <h1>PPSC</h1>
-            <p>Personalized report as the name displays, is specific for each student containing all the available options for him according to his field, interest, location and budget ....</p>
+            <h1>PPSC/FPSC</h1>
+            <p>Preparation for various PPSC, FPSC jobs</p>
          </div>
-         <a href="{{url('blog#personalized-report')}}" class="btn-blue">
-            Read More
-         </a>
+
       </div>
 
 
@@ -119,37 +104,34 @@
 
 <!-- Quotation -->
 <section class="quote">
-   <p>The world is full of wonderful things you have not seen yet.<br>
-      Don't ever give up on the chance of seeing them.</p>
+   <p>Better skills give you better earning</p>
 </section>
 <!-- FAQ -->
 <section class="faq">
-   <h2 class="drivethru">DRIVETHRU</h2>
    <div class="title red-underline">Frequently Asked Questions</div>
 
    <div class="row">
       <div class="col">
 
          <div class="question show">
-            <div class="q"> <i data-feather="bell" class="feather-small"></i> What is drivethru.pk? </div>
-            <div class="ans">Drivethru.pk is first of its kind, an ed-tech firm that is working to meet the higher educational requirements of students of Pakistan. </div>
+            <div class="q"> <i data-feather="bell" class="feather-small"></i> What is school of technologies for? </div>
+            <div class="ans">School of technologies gives you state the art technologies on the basis of "learn to earn" mode. </div>
 
          </div>
          <div class="question">
             <div class="q"> <i data-feather="bell" class="feather-small"></i> What services do you provide? </div>
-            <div class="ans">Drivethru provides information about 175+ National HEC Recognized Universities and International Universities from 17+ countries, for FREE. We let you know about their eligibility criteria, offered programs, Fee structure, Entrance tests, past papers and complete counselling.</div>
+            <div class="ans">We offer android development, web development, amazon virtual assistant, graphics designing and ppsc preparation courses</div>
 
          </div>
          <div class="question">
             <div class="q"><i data-feather="bell" class="feather-small"></i> How much do you charge? </div>
-            <div class="ans">We provide complete information about National and International admissions, FREE OF COST. If you want us to apply on your behalf in these Universities, then we charge $1/ University ($1=150 pkr). (Note: We charge no consultancy fees.</div>
+            <div class="ans">It varies from course to course. For detail, you may put a separate query using whatsapp or contact us page</div>
          </div>
          <div class="question">
 
-            <div class="q"><i data-feather="bell" class="feather-small"></i> How can I book an appointment?</div>
-            <div class="ans">You can reach us via WhatsApp in office timing 9:00 A.M-5:00 P.M at following Contact Number.<br>
-               <strong>+92 316 4515249</strong> <br>
-               Further, you can leave your message at our Facebook and Instagram. Our team is available for you 24/7 on mentioned sites.
+            <div class="q"><i data-feather="bell" class="feather-small"></i> Are classes online?</div>
+            <div class="ans">
+               No, all classes are physical. We believe in quality, not in quantity. We care our students by direct coachig.
             </div>
          </div>
       </div>
