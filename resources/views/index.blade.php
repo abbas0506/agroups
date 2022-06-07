@@ -28,8 +28,8 @@
             <img src="{{asset('/images/icons/android.png')}}" alt="">
          </div>
          <div class="content">
-            <h1>Android Development</h1>
-            <p>Fluter is used to teach android devevelopment</p>
+            <h1>MOBILE APPS</h1>
+            <p>Flutter, Android</p>
          </div>
          <!-- <a href="{{url('blog#find-university')}}" class="btn-blue">
             Read More
@@ -41,8 +41,8 @@
             <img src="{{asset('/images/icons/laptop.png')}}" alt="">
          </div>
          <div class="content">
-            <h1>Web Designing</h1>
-            <p>HTML, CSS, Bootstrap, tailwind css, Javascript, jquery </p>
+            <h1>WORDPRESS</h1>
+            <p>Beginner level, expert level </p>
          </div>
          <!-- <a href="{{url('blog#apply-through-us')}}" class="btn-blue">
             Read More
@@ -54,8 +54,8 @@
             <img src="{{asset('/images/icons/coding.png')}}" alt="">
          </div>
          <div class="content">
-            <h1>Web Development</h1>
-            <p>Wordpress, core PHP and Laravel framework</p>
+            <h1>WEB DEVELOPMENT</h1>
+            <p>Core PHP, Laravel</p>
          </div>
 
 
@@ -70,8 +70,8 @@
             <img src="{{asset('/images/icons/amazon.png')}}" alt="">
          </div>
          <div class="content">
-            <h1>Amazon</h1>
-            <p>Amazon Virtual Assistant using latest tools</p>
+            <h1>AMAZON</h1>
+            <p>Virtual Assistant, FBA </p>
          </div>
 
       </div>
@@ -80,8 +80,8 @@
             <img src="{{asset('/images/icons/graphics.png')}}" alt="">
          </div>
          <div class="content">
-            <h1>Graphics Designing</h1>
-            <p>Adobe XD, Illustrtor</p>
+            <h1>GRAPHICS</h1>
+            <p>Adobe Photoshop, XD, Illustrtor</p>
          </div>
 
       </div>
@@ -90,8 +90,8 @@
             <img src="{{asset('/images/icons/ppsc.png')}}" alt="">
          </div>
          <div class="content">
-            <h1>PPSC/FPSC</h1>
-            <p>Preparation for various PPSC, FPSC jobs</p>
+            <h1>GK PREPARATION</h1>
+            <p>PPSC, FPSC, NTS, PTS, UTS, CTS</p>
          </div>
 
       </div>
@@ -156,12 +156,12 @@
 <br />
 @elseif(session('success'))
 <script>
-Swal.fire({
-   icon: 'success',
-   title: "Successful",
-   showConfirmButton: false,
-   timer: 1500
-});
+   Swal.fire({
+      icon: 'success',
+      title: "Successful",
+      showConfirmButton: false,
+      timer: 1500
+   });
 </script>
 @endif
 
@@ -169,48 +169,48 @@ Swal.fire({
 
 @section('script')
 <script>
-function validate() {
-   var regex = /^\d{10}$/;
-   var msg = '';
-   var name = $('#name').val()
-   var phone = $('#phone').val();
-   var email = $('#email').val();
-   var message = $('#message').val();
+   function validate() {
+      var regex = /^\d{10}$/;
+      var msg = '';
+      var name = $('#name').val()
+      var phone = $('#phone').val();
+      var email = $('#email').val();
+      var message = $('#message').val();
 
-   //validate name
-   if (name == '' || name == null) msg = 'Name required!';
-   //validare phone no.
-   else if (phone == '' || phone == null) msg = 'Phone required!';
-   else if (email == '' || email == null) msg = 'Email required!';
-   else if (phone.length < 10) msg = 'Too short phone no!';
-   else if (phone.length > 10) msg = 'Too long phone no!';
-   else if (regex.test(phone) == false) msg = 'invalid phone';
-   else if (message == '' || messaage == null) msg = 'Message required!';
+      //validate name
+      if (name == '' || name == null) msg = 'Name required!';
+      //validare phone no.
+      else if (phone == '' || phone == null) msg = 'Phone required!';
+      else if (email == '' || email == null) msg = 'Email required!';
+      else if (phone.length < 10) msg = 'Too short phone no!';
+      else if (phone.length > 10) msg = 'Too long phone no!';
+      else if (regex.test(phone) == false) msg = 'invalid phone';
+      else if (message == '' || messaage == null) msg = 'Message required!';
 
-   //show validation error, if any
-   if (msg != '') {
-      Toast.fire({
-         icon: 'warning',
-         title: msg
-      });
-      return false;
+      //show validation error, if any
+      if (msg != '') {
+         Toast.fire({
+            icon: 'warning',
+            title: msg
+         });
+         return false;
+      }
    }
-}
 
-// if window scrolled down, make header light
-window.onscroll = function(ev) {
-   // var navbar=document.getElementById('navbar');
+   // if window scrolled down, make header light
+   window.onscroll = function(ev) {
+      // var navbar=document.getElementById('navbar');
 
 
-   if ((window.scrollY) >= 120) {
-      // you're at the bottom of the page
-      if (!$('#navbar').hasClass('light'))
-         $('#navbar').addClass('light');
-      $('#menubars').toggleClass('feather-light');
+      if ((window.scrollY) >= 120) {
+         // you're at the bottom of the page
+         if (!$('#navbar').hasClass('light'))
+            $('#navbar').addClass('light');
+         $('#menubars').toggleClass('feather-light');
 
-   } else {
-      $('#navbar').removeClass('light');
-   }
-};
+      } else {
+         $('#navbar').removeClass('light');
+      }
+   };
 </script>
 @endsection
