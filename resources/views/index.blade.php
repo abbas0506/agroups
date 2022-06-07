@@ -13,7 +13,7 @@
       <p>We teach the best technologies of the world</p>
       <h1>Learn to earn</h1>
       <button class="btn btn-red rounded">
-         <a href="#">Apply Now</a>
+         <a href="{{route('students.create')}}">Register Now</a>
       </button>
    </div>
 </section>

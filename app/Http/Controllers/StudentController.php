@@ -2,8 +2,13 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Course;
 use App\Models\Student;
+use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Hash;
+use Exception;
 
 class StudentController extends Controller
 {
@@ -25,6 +30,8 @@ class StudentController extends Controller
     public function create()
     {
         //
+        $courses = Course::all();
+        return view('students.create', compact('courses'));
     }
 
     /**
@@ -36,6 +43,41 @@ class StudentController extends Controller
     public function store(Request $request)
     {
         //
+        $request->validate([
+            'name' => 'required',
+            'phone' => 'required',
+            'email' => 'required',
+            'address' => 'required',
+            'gender' => 'required',
+            'birthdate' => 'required',
+            'qualification' => 'required',
+        ]);
+
+        DB::beginTransaction();
+        try {
+
+            $user = new User;
+            $user->name = $request->name;
+            $user->phone = $request->phone;
+            $user->email = $request->email;
+            $user->password = Hash::make('password');
+            $user->role_id = 1; //student role
+
+            $student = new Student;
+            $student->gender = $request->gender;
+            $student->qualification = $request->qualification;
+            $student->address = $request->address;
+            $student->birthdate = $request->birthdate;
+
+            $user->save();
+            $student->save();
+            DB::commit();
+            return redirect('registration.success')->with('success', 'Successfully created');
+        } catch (Exception $e) {
+            Db::rollBack();
+            return redirect()->back()->withErrors($e->getMessage());
+            // something went wrong
+        }
     }
 
     /**

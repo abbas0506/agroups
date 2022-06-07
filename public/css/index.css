@@ -414,13 +414,12 @@ a {
 
 .header {
     /* background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)), url('./images/capture1.png'); */
-    background-image: url('../images/bg/full/0.jpg');
+    background-image: url('../images/bg/full/banner.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    height: 110vh;
+    height: 100vh;
     width: 100%;
-    opacity: 0.7;
     position: relative;
 }
 
@@ -508,21 +507,46 @@ nav .feather-small {
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
-    color: #333;
+    color: #fff;
 }
 
 .app-msg h1 {
-    font-size: 36px;
+    font-size: 48px;
     margin-top: 20px;
 }
 
 .app-msg p {
-    font-size: 24px;
-    color: #ff5421;
+    font-size: 32px;
+    color: #f4a21f;
 }
 
 .app-msg button {
     margin-top: 25px;
+}
+
+.page-centered.w-50 {
+    position: absolute;
+    left: 20%;
+}
+
+.page-centered.w-70 {
+    position: absolute;
+    left: 12%;
+}
+
+.top-right-icon {
+    /* relative to parent */
+    position: absolute;
+    text-align: center;
+    top: 10px;
+    right: 10px;
+    border: 0;
+    transition: all ease 0.5s;
+}
+
+.top-right-icon:hover {
+    cursor: pointer;
+    background-color: #db6743;
 }
 
 .btn {
@@ -1197,8 +1221,8 @@ section .drivethru {
     position: relative;
 }
 
-.mini_header.admission {
-    background-image: url('../images/bg/mini/admission.png');
+.mini_header.registration {
+    background-image: url('../images/bg/mini/registration.png');
 }
 
 .mini_header.services {

@@ -7,8 +7,10 @@
    <title>SOT</title>
    <link rel="icon" href="{{ asset('/images/logo/favicon.ico') }}">
    <link href="{{ asset('/css/index.css') }}" rel="stylesheet">
+   <link href="{{ asset('/css/registration.css') }}" rel="stylesheet">
    <link href="{{ asset('/css/responsive.css')}}" rel="stylesheet">
    <link href="{{ asset('/css/fontawesome.css') }}" rel="stylesheet">
+   <link href="{{ asset('/css/fancyinput.css') }}" rel="stylesheet">
 
 
    <script src="{{ asset('/js/feather.min.js')}}"></script>
