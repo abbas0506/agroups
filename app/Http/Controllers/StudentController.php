@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Models\Course;
+use App\Models\Group;
+use App\Models\Registration;
 use App\Models\Student;
 use App\Models\User;
 use Illuminate\Http\Request;
@@ -30,8 +32,9 @@ class StudentController extends Controller
     public function create()
     {
         //
-        $courses = Course::all();
-        return view('students.create', compact('courses'));
+        $groups = Group::all(); //later on only active groups (less than closing dates) will be filtered out
+
+        return view('students.create', compact('groups'));
     }
 
     /**
@@ -51,6 +54,7 @@ class StudentController extends Controller
             'gender' => 'required',
             'birthdate' => 'required',
             'qualification' => 'required',
+            'group_id' => 'required',
         ]);
 
         DB::beginTransaction();
@@ -61,16 +65,21 @@ class StudentController extends Controller
             $user->phone = $request->phone;
             $user->email = $request->email;
             $user->password = Hash::make('password');
-            $user->role_id = 1; //student role
+            $user->save();
 
             $student = new Student;
+            $student->user_id = $user->id;
             $student->gender = $request->gender;
             $student->qualification = $request->qualification;
             $student->address = $request->address;
             $student->birthdate = $request->birthdate;
-
-            $user->save();
             $student->save();
+
+            $registration = new Registration;
+            $registration->student_id = $student->id;
+            $registration->group_id = $request->group_id;
+            $registration->save();
+
             DB::commit();
             return redirect('registration.success')->with('success', 'Successfully created');
         } catch (Exception $e) {

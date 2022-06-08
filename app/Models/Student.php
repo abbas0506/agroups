@@ -12,6 +12,7 @@ class Student extends Model
         'name',
         'gender',
         'birhdate',
+        'address',
         'qualification'
     ];
     public $timestamps = false;

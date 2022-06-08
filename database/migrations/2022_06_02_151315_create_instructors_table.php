@@ -15,7 +15,20 @@ class CreateInstructorsTable extends Migration
     {
         Schema::create('instructors', function (Blueprint $table) {
             $table->id();
-            $table->$table->timestamps();
+            $table->unsignedBigInteger('user_id');
+            $table->string('gender');
+            $table->string('address');
+            $table->string('qualification')->nullable();
+            $table->string('specialization')->nullable();
+            $table->unsignedInteger('experience')->nullable();
+
+            $table->foreign('user_id')
+                ->references('id')
+                ->on('users')
+                ->onUpdate('cascade')
+                ->onDelete('cascade');
+
+            $table->timestamps();
         });
     }
 

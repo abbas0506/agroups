@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateGroupsTable extends Migration
+class CreateRegistrationsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,23 +13,22 @@ class CreateGroupsTable extends Migration
      */
     public function up()
     {
-        Schema::create('groups', function (Blueprint $table) {
+        Schema::create('registrations', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
-            $table->unsignedBigInteger('course_id');
-            $table->unsignedBigInteger('instructor_id');
-            $table->date('startdate')->nullable();
-            $table->date('enddate')->nullable();
+            $table->unsignedBigInteger('student_id');
+            $table->unsignedBigInteger('group_id');
+            $table->boolean('status')->default(1);  //individual status of student: left or on roll
+            $table->string('remarks')->nullable();  //special note about student status
 
-            $table->foreign('course_id')
+            $table->foreign('student_id')
                 ->references('id')
-                ->on('courses')
+                ->on('students')
                 ->onUpdate('cascade')
                 ->onDelete('cascade');
 
-            $table->foreign('instructor_id')
+            $table->foreign('group_id')
                 ->references('id')
-                ->on('instructors')
+                ->on('groups')
                 ->onUpdate('cascade')
                 ->onDelete('cascade');
 
@@ -44,6 +43,6 @@ class CreateGroupsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('groups');
+        Schema::dropIfExists('registrations');
     }
 }
