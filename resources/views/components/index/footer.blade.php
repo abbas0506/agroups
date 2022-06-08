@@ -9,7 +9,7 @@
       <p><i data-feather="phone-call" class="feather-small feather-red"></i>+92 300 41 03 160</p>
       <p><i data-feather="mail" class="feather-small feather-red"></i>info@schooloftechnologies.com</p>
    </div>
-   <div class="col contact">
+   <!-- <div class="col contact">
       <h2>CONTACT US</h2>
       <form action="#" method='post' class="contactus" onsubmit="return validate()">
          @csrf
@@ -28,7 +28,7 @@
             <button class="btn btn-red">Submit Now</button>
          </div>
       </form>
-   </div>
+   </div> -->
    <div class='copyright'>
       ALL RIGHTS RESERVED © COPY RIGHTS 2021 PRIVACY POLICY
    </div>

@@ -103,7 +103,7 @@
         min-height: 20vh;
     }
     .quote p {
-        font-size: 0.8rem;
+        font-size: 0.9rem;
     }
     .quote p::before,
     .quote p::after {
@@ -159,12 +159,11 @@
     }
     /* content */
     .footer .content {
-        margin-top: 50px;
+        margin-top: 0;
     }
-    .footer .about,
     .footer .contact,
     .footer .address {
-        margin-top: 20px;
+        margin-top: 10px;
     }
     .copyright {
         bottom: 10px;
@@ -206,12 +205,6 @@
     .index-page .col>img {
         margin: 40px 0;
     }
-    .header {
-        height: 50vh;
-        background-image: none;
-        margin: 0;
-        padding: 0;
-    }
     #image-animator,
     #image-animator img {
         width: 100%;
@@ -220,6 +213,9 @@
     .app-msg h1 {
         color: white;
     }
+    .app-msg p {
+        padding: 0 10px;
+    }
 }
 
 @media only screen and (max-width: 440px) {
@@ -227,7 +223,7 @@
         min-height: 15vh;
     }
     .quote p {
-        font-size: 0.6rem;
+        font-size: 0.8rem;
     }
     .quote p::before,
     .quote p::after {
@@ -242,5 +238,9 @@
         top: 5px;
         right: -5%;
         text-align: right;
+    }
+    .app-msg p {
+        padding: 0 10px;
+        font-size: 1rem;
     }
 }
