@@ -1062,6 +1062,7 @@ ul li img {
     from {
         -webkit-transform: translateY(100%);
     }
+
     to {
         -webkit-transform: translateY(-100%);
     }
@@ -1071,6 +1072,7 @@ ul li img {
     from {
         transform: translateY(100%);
     }
+
     to {
         transform: translateY(-100%);
     }
