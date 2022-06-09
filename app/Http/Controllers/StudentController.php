@@ -32,9 +32,8 @@ class StudentController extends Controller
     public function create()
     {
         //
-        $groups = Group::all(); //later on only active groups (less than closing dates) will be filtered out
-
-        return view('students.create', compact('groups'));
+        $courses = Course::all();
+        return view('students.create', compact('courses'));
     }
 
     /**
@@ -54,7 +53,7 @@ class StudentController extends Controller
             'gender' => 'required',
             'birthdate' => 'required',
             'qualification' => 'required',
-            'group_id' => 'required',
+            'course_id' => 'required',
         ]);
 
         DB::beginTransaction();
@@ -65,6 +64,7 @@ class StudentController extends Controller
             $user->phone = $request->phone;
             $user->email = $request->email;
             $user->password = Hash::make('password');
+            $user->role_id = 4; //student
             $user->save();
 
             $student = new Student;
@@ -77,7 +77,7 @@ class StudentController extends Controller
 
             $registration = new Registration;
             $registration->student_id = $student->id;
-            $registration->group_id = $request->group_id;
+            $registration->course_id = $request->course_id;
             $registration->save();
 
             DB::commit();

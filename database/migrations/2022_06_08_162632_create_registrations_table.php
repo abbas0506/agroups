@@ -16,7 +16,7 @@ class CreateRegistrationsTable extends Migration
         Schema::create('registrations', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('student_id');
-            $table->unsignedBigInteger('group_id');
+            $table->unsignedBigInteger('course_id');
             $table->boolean('status')->default(1);  //individual status of student: left or on roll
             $table->string('remarks')->nullable();  //special note about student status
 
@@ -26,9 +26,9 @@ class CreateRegistrationsTable extends Migration
                 ->onUpdate('cascade')
                 ->onDelete('cascade');
 
-            $table->foreign('group_id')
+            $table->foreign('course_id')
                 ->references('id')
-                ->on('groups')
+                ->on('courses')
                 ->onUpdate('cascade')
                 ->onDelete('cascade');
 

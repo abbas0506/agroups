@@ -36,58 +36,56 @@
       @endif
       <div class="frow stretched auto-col">
          <div class="fcol w-48 mt-4 fancyselect">
-            <select name="group_id">
-               @foreach ($groups as $group)
-               <option value="{{ $group->id }}">{{ $group->course->name }}</option>
+            <select name="course_id">
+               @foreach ($courses as $course)
+               <option value="{{ $course->id }}">{{ $course->name }}</option>
                @endforeach
             </select>
-            {{-- <label for="">Choose Your Course</label> --}}
+            <label for="">Choose Your Course</label>
          </div>
 
 
       </div>
       <div class="frow stretched auto-col">
-         <div class="fcol w-48 mt-3 fancyinput">
+         <div class="fcol w-48 mt-4 fancyinput">
             <input type="text" name='name' placeholder="Your Name" required>
-            {{-- <label for="">Name</label> --}}
+            <label for="">Name</label>
          </div>
-         <div class="fcol w-48 mt-3 fancyselect">
+         <div class="fcol w-48 mt-4 fancyselect">
             <select name="gender">
                <option value="m">M</option>
                <option value="f">F</option>
             </select>
-            {{-- <label for="">Gender</label> --}}
-         </div>
-
-      </div>
-      <div class=" frow stretched auto-col">
-         <div class="fcol w-48 mt-3 fancyinput">
-            <input type="text" name='phone' placeholder="Phone" required pattern="[0-9][0-9]{10}">
-            {{-- <label for="">Phone (03001234567)</label> --}}
-         </div>
-         <div class="fcol w-48 mt-3 fancyinput">
-            <input type="email" name='email' placeholder="Email" required>
-            {{-- <label for="">Email</label> --}}
+            <label for="">Gender</label>
          </div>
 
       </div>
       <div class="frow stretched auto-col">
-
-         <div class="fcol w-48 mt-3 fancyinput">
+         <div class="fcol w-48 mt-4 fancyinput">
             <input type="date" name='birthdate'>
-            {{-- <label for="">Date of Birth</label> --}}
+            <label for="">Date of Birth</label>
          </div>
          <div class="fcol w-48 mt-4 fancyinput">
             <input type="text" name='qualification' placeholder="Qualification" required>
-            {{-- <label for="">Qualification</label> --}}
+            <label for="">Qualification</label>
          </div>
       </div>
-      <div class="frow w-100 mt-3 fancyinput">
-         <input type="text" name='address' placeholder="Address">
-         {{-- <label for="">Address </label> --}}
-      </div>
 
-      <frow class="frow mid-right mt-3">
+      <div class=" frow stretched auto-col">
+         <div class="fcol w-48 mt-4 fancyinput">
+            <input type="text" name='phone' placeholder="Phone" required pattern="[0-9][0-9]{10}">
+            <label for="">Phone (03001234567)</label>
+         </div>
+         <div class="fcol w-48 mt-4 fancyinput">
+            <input type="email" name='email' placeholder="Email" required>
+            <label for="">Email</label>
+         </div>
+      </div>
+      <div class="frow w-100 mt-4 fancyinput">
+         <input type="text" name='address' placeholder="Address">
+         <label for="">Address </label>
+      </div>
+      <frow class="frow mid-right mt-4">
          <a class="btn btn-sm btn-primary mr-2" href='/'>Cancel</a>
          <button type='submit' class="btn btn-sm btn-red">Save</button>
       </frow>
