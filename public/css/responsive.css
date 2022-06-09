@@ -30,22 +30,10 @@
         font-size: 0.8rem;
         text-align: justify;
     }
-    .who,
-    .offer,
     .services,
     .faq {
         width: 90%;
         margin: auto;
-    }
-    section.offer {
-        margin-top: 100px;
-    }
-    .offer .col {
-        padding: 10px 0px 10px 20px;
-    }
-    .offer .col img {
-        width: 30px;
-        height: 30px;
     }
     nav {
         padding: 4%;
@@ -187,9 +175,6 @@
         display: block;
         width: 80%;
     }
-    .whatsapp-icon {
-        bottom: 80px;
-    }
     .index-page {
         width: 92%;
     }
@@ -215,6 +200,12 @@
     }
     .app-msg p {
         padding: 0 10px;
+    }
+    .page-centered.w-70 {
+        position: absolute;
+        margin-left: 4%;
+        width: 84%;
+        left: 0;
     }
 }
 

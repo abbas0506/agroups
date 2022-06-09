@@ -82,7 +82,7 @@
 
    // if window scrolled down, make header light
    window.onscroll = function(ev) {
-      if ((window.scrollY) >= 120) {
+      if ((window.scrollY) >= 20) {
          if (!$('#navbar').hasClass('light')) {
             $('#navbar').addClass('light');
             $('#menubars').removeClass('feather-light');

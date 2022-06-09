@@ -13,7 +13,7 @@
          <div class="fcol circular-25 border-0 bg-green centered" onclick="reset()">
             <i data-feather='refresh-ccw' class="feather-xsmall txt-white"></i>
          </div>
-         <div class="ml-2 txt-grey">Reset</div>
+         <!-- <div class="ml-2 txt-grey">Reset</div> -->
       </div>
    </div>
 
