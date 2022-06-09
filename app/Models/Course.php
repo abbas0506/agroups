@@ -13,10 +13,17 @@ class Course extends Model
         'fee',
         'duration',
     ];
+
+    protected $appends = ['student_count'];
     public $timestamps = false;
 
     public function students()
     {
         return $this->belongsToMany(Student::class, 'registrations');
+    }
+
+    public function getStudentCountAttribute()
+    {
+        return $this->students()->count();
     }
 }

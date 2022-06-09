@@ -21,6 +21,6 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 
 Route::get('courses', function () {
-    $courses = Course::with('students')->get();
+    $courses = Course::all();
     return response($courses);
 });
