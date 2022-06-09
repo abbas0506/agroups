@@ -14,4 +14,9 @@ class Course extends Model
         'duration',
     ];
     public $timestamps = false;
+
+    public function students()
+    {
+        return $this->hasMany(Student::class);
+    }
 }
