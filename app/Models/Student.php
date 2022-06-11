@@ -16,4 +16,9 @@ class Student extends Model
         'qualification'
     ];
     public $timestamps = false;
+
+    public function courses()
+    {
+        return $this->belongsToMany(Course::class, 'registrations');
+    }
 }

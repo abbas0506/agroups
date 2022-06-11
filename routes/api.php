@@ -1,6 +1,7 @@
 <?php
 
 use App\Models\Course;
+use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -23,4 +24,10 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 Route::get('courses', function () {
     $courses = Course::all();
     return response($courses);
+});
+
+
+Route::get('users', function () {
+    $users = User::with(['student.courses'])->doesntHave('student.courses')->get();
+    return response($users);
 });
