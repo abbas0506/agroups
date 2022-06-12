@@ -1,6 +1,7 @@
 <?php
 
 use App\Models\Course;
+use App\Models\Student;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
@@ -27,7 +28,9 @@ Route::get('courses', function () {
 });
 
 
-Route::get('users', function () {
-    $users = User::with(['student.courses'])->doesntHave('student.courses')->get();
+Route::get('course/{id}/students', function ($id) {
+    $users = Student::whereHas('courses', function ($q) use ($id) {
+        $q->where('course_id', $id);
+    })->with('user')->get();
     return response($users);
 });
