@@ -32,7 +32,7 @@ class StudentController extends Controller
     public function create()
     {
         //
-        $courses = Course::all();
+        $courses = Course::orderBy('name', 'asc')->get();
         return view('students.create', compact('courses'));
     }
 
