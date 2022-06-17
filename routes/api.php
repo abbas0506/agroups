@@ -29,6 +29,7 @@ Route::get('courses', function () {
 
 
 Route::get('course/{id}/students', function ($id) {
+    return response([]);
     $users = Student::whereHas('courses', function ($q) use ($id) {
         $q->where('course_id', $id);
     })->with('user')->get();
