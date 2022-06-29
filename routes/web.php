@@ -14,7 +14,9 @@ use App\Http\Controllers\StudentController;
 |
 */
 
-Route::get('/', [StudentController::class, 'create']);
+Route::get('/', function () {
+    return view('index');
+});
 
 Route::resource('students', StudentController::class);
 Route::view('registration.success', 'students.success');
