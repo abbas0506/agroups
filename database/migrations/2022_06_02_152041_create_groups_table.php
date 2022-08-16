@@ -16,11 +16,15 @@ class CreateGroupsTable extends Migration
         Schema::create('groups', function (Blueprint $table) {
             $table->id();
             $table->string('name');
+            $table->longText('body');
             $table->unsignedBigInteger('course_id');
             $table->unsignedBigInteger('instructor_id');
             $table->date('startdate')->nullable();
             $table->date('enddate')->nullable();
-
+            $table->boolean('status')->default(1);
+            $table->unsignedInteger('fee')->default(6000);
+            $table->unsignedInteger('discount')->default(0);
+            $table->unsignedTinyInteger('duration');
             $table->foreign('course_id')
                 ->references('id')
                 ->on('courses')

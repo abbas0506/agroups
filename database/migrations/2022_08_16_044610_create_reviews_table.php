@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateCoursesTable extends Migration
+class CreateReviewsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,12 @@ class CreateCoursesTable extends Migration
      */
     public function up()
     {
-        Schema::create('courses', function (Blueprint $table) {
+        Schema::create('reviews', function (Blueprint $table) {
             $table->id();
-            $table->string('logo')->default("https://seeklogo.com/images/L/laravel-logo-41EC1D4C3F-seeklogo.com.png");
-            $table->string('name');
-            $table->longText('body');
+            $table->unsignedBigInteger('user_id');
+            $table->float('rating')->default(5);
+            $table->string('body');
+            $table->morphs('reviewable');
             $table->timestamps();
         });
     }
@@ -29,6 +30,6 @@ class CreateCoursesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('courses');
+        Schema::dropIfExists('reviews');
     }
 }
