@@ -22,6 +22,6 @@ class CourseSeeder extends Seeder
         Course::create(['name' => 'Amazon FBA Wholesale', 'body' => 'course details']);
         Course::create(['name' => 'Amazon FBA Private Label', 'body' => 'course details']);
         Course::create(['name' => 'Graphics', 'body' => 'course details']);
-        Course::create(['name' => 'GK Preparation',  'body' => 'course details']);
+        Course::create(['name' => 'Job Test Prepration',  'body' => 'course details']);
     }
 }
