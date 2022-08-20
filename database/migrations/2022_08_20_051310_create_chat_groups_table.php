@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateQualificationStudentsTable extends Migration
+class CreateChatGroupsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,12 @@ class CreateQualificationStudentsTable extends Migration
      */
     public function up()
     {
-        Schema::create('qualification_students', function (Blueprint $table) {
-            $table->unsignedBigInteger('qualification_id');
-            $table->unsignedBigInteger('student_id');
+        Schema::create('chat_groups', function (Blueprint $table) {
+            $table->id();
+            $table->unsignedBigInteger('creator_id');
+            $table->string('logo');
+            $table->string('title');
+            $table->string('status');
             $table->timestamps();
         });
     }
@@ -27,6 +30,6 @@ class CreateQualificationStudentsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('qualification_students');
+        Schema::dropIfExists('chat_groups');
     }
 }

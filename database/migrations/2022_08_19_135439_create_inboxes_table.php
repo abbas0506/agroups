@@ -20,9 +20,10 @@ class CreateInboxesTable extends Migration
             $table->string('last_message');
             $table->boolean('is_read')->default(false);
             $table->unsignedBigInteger('sender_id')->nullable();
+            $table->string('type');
             $table->timestamps();
-            $table->foreign('student_id')->references('id')->on('users');
-            $table->foreign('tutor_id')->references('id')->on('users');
+            $table->foreign('user1_id')->references('id')->on('users');
+            $table->foreign('user2_id')->references('id')->on('users');
         });
     }
 
