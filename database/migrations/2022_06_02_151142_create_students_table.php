@@ -18,6 +18,7 @@ class CreateStudentsTable extends Migration
             $table->unsignedBigInteger('user_id');
             $table->unsignedTinyInteger('gender', 1);
             $table->date('birthdate');
+            $table->string('cnic', 15)->unique();
             $table->string('address', 200);
             $table->string('qualification');
             $table->timestamps();
