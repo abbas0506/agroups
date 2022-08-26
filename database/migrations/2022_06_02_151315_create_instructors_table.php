@@ -19,7 +19,7 @@ class CreateInstructorsTable extends Migration
             $table->string('gender');
             $table->string('address');
             $table->string('specialization')->nullable();
-            $table->unsignedInteger('experience')->nullable();
+            $table->string('experience')->nullable();
             $table->foreign('user_id')
                 ->references('id')
                 ->on('users')

@@ -15,13 +15,13 @@ class CourseSeeder extends Seeder
     public function run()
     {
         //
-        Course::create(['name' => 'Mobile App Developemnt (Flutter)', 'body' => 'course details']);
-        Course::create(['name' => 'Wordpress Web Development', 'body' => 'course details']);
-        Course::create(['name' => 'Web Development (Laravel)',  'body' => 'course details']);
-        Course::create(['name' => 'Amazon Virtual Assistant',  'body' => 'course details']);
-        Course::create(['name' => 'Amazon FBA Wholesale', 'body' => 'course details']);
-        Course::create(['name' => 'Amazon FBA Private Label', 'body' => 'course details']);
-        Course::create(['name' => 'Graphic Designing', 'body' => 'course details']);
-        Course::create(['name' => 'Job Test Prepration',  'body' => 'course details']);
+        Course::create(['title' => 'Mobile App Developemnt (Flutter)', 'body' => 'course details', 'code' => 'MAD']);
+        Course::create(['title' => 'Wordpress Web Development', 'body' => 'course details', 'code' => 'WWD']);
+        Course::create(['title' => 'Web Development (Laravel)',  'body' => 'course details', 'code' => 'WDL']);
+        Course::create(['title' => 'Amazon Virtual Assistant',  'body' => 'course details', 'code' => 'AVA']);
+        Course::create(['title' => 'Amazon FBA Wholesale', 'body' => 'course details', 'code' => 'AWS']);
+        Course::create(['title' => 'Amazon FBA Private Label', 'body' => 'course details', 'code' => 'APL']);
+        Course::create(['title' => 'Graphic Designing', 'body' => 'course details', 'code' => 'GD']);
+        Course::create(['title' => 'Job Test Prepration',  'body' => 'course details', 'code' => 'JTP']);
     }
 }
