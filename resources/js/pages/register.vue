@@ -36,7 +36,8 @@
                                     <div class="col-lg-6">
                                         <div class="form-group">
                                             <label for="phone">Phone*</label>
-                                            <input v-model="phone" type="text" id="phone" placeholder="03001234567">
+                                            <input v-model="phone" type="text" id="phone" minlength="11" maxlength="11"
+                                                placeholder="03001234567">
                                         </div>
                                     </div>
                                 </div>
@@ -160,7 +161,7 @@ export default {
                 return;
             }
             try {
-                await axios.post('/students', {
+                var res = await axios.post('/students', {
                     'name': this.name,
                     'qualification': this.qualification,
                     'course_id': this.course,
@@ -169,6 +170,7 @@ export default {
                     'email': this.email,
                     'dob': this.dob,
                 });
+                console.log(res.data);
                 this.$refs.regform.reset();
                 this.$swal.fire({
                     icon: 'success',
