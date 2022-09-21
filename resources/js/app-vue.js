@@ -28,6 +28,7 @@ import * as VueGoogleMaps from 'vue2-google-maps';
 import HomePage from './pages/index'
 import CoursesPage from './pages/courses'
 import RegisterPage from './pages/register'
+import AboutUsPage from './pages/about-us'
 import ContactUsPage from './pages/contact-us'
 
 app.use(VueObserveVisibility)
@@ -45,8 +46,9 @@ app.use(VueSweetalert2)
 // app.component('header-one', HeaderOne)
 app.component('home-page', HomePage)
 app.component('register-page', RegisterPage)
-app.component('contactus-page', ContactUsPage)
 app.component('courses-page', CoursesPage)
+app.component('aboutus-page', AboutUsPage)
+app.component('contactus-page', ContactUsPage)
 // app.component('pagination', Pagination);
 // app.component('CoolLightBox', CoolLightBox)
 

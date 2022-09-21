@@ -6,7 +6,7 @@
                     <div class="col-lg-3 col-md-6">
                         <div class="edu-footer-widget">
                             <div class="logo">
-                                <a to="/">
+                                <a href="/">
                                     <img class="logo-light" src="/images/logo/logo-dark.png" alt="Dark Logo">
                                     <img class="logo-dark" src="/images/logo/logo-white.png" alt="Light Logo">
                                 </a>
@@ -65,16 +65,16 @@
                                             class="icon-4"></i></button>
                                 </div>
                                 <ul class="social-share icon-transparent">
-                                    <li><a href="https://facebook.com/" target="_blank" class="color-fb"><i
+                                    <li><a href="https://facebook.com/schooloftechs" target="_blank" class="color-fb"><i
                                                 class="icon-facebook"></i></a></li>
-                                    <li><a href="https://linkedin.com/" target="_blank" class="color-linkd"><i
-                                                class="icon-linkedin2"></i></a></li>
-                                    <li><a href="https://instagram.com/" target="_blank" class="color-ig"><i
-                                                class="icon-instagram"></i></a></li>
-                                    <li><a href="https://twitter.com/" target="_blank" class="color-twitter"><i
-                                                class="icon-twitter"></i></a></li>
-                                    <li><a href="https://youtube.com/" target="_blank" class="color-yt"><i
-                                                class="icon-youtube"></i></a></li>
+                                    <!-- <li><a href="https://linkedin.com/" target="_blank" class="color-linkd"><i
+                                                class="icon-linkedin2"></i></a></li> -->
+                                    <li><a href="https://instagram.com/schooloftechnologies" target="_blank"
+                                            class="color-ig"><i class="icon-instagram"></i></a></li>
+                                    <li><a href="https://twitter.com/schooloftechs" target="_blank"
+                                            class="color-twitter"><i class="icon-twitter"></i></a></li>
+                                    <li><a href="https://youtube.com/channel/UC8_3exgUBbk0tgg05MuShsA" target="_blank"
+                                            class="color-yt"><i class="icon-youtube"></i></a></li>
                                 </ul>
                             </div>
                         </div>

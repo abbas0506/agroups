@@ -57,4 +57,11 @@ class WebController extends Controller
     {
         return view('layouts.web_vue', ['page' => 'contact-us']);
     }
+
+    public function aboutUs()
+    {
+        $data['page'] = 'about-us';
+        $data['instructors'] = User::where('role_id', 4)->with('instructor')->take(4)->inRandomOrder()->get();
+        return view('layouts.web_vue', $data);
+    }
 }

@@ -20,39 +20,38 @@
                                 <li class="shape-2">
                                     <img src="/images/faq/shape-04.png" alt="Shape">
                                 </li>
-                                
-                                <MouseMove addClassName="shape-3 shape-light" dataDepth="2" imgSrc="/images/faq/shape-14.png" />
 
-                                <MouseMove addClassName="shape-3 shape-dark" dataDepth="2" imgSrc="/images/faq/dark-shape-14.png" />
+                                <MouseMove addClassName="shape-3 shape-light" dataDepth="2"
+                                    imgSrc="/images/faq/shape-14.png" />
+
+                                <MouseMove addClassName="shape-3 shape-dark" dataDepth="2"
+                                    imgSrc="/images/faq/dark-shape-14.png" />
                             </ul>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <CoolLightBox
-            :items="items"
-            :index="index"
-            @close="index = null"
-        >
+        <CoolLightBox :items="items" :index="index" @close="index = null">
         </CoolLightBox>
     </div>
 </template>
 
 <script>
-    export default {
-        components: {
-            MouseMove: () => import('@/components/animation/MouseMove')
-        },
-        data () {
-            return {
-                items: [
-                    {
-                        src: "https://www.youtube.com/watch?v=PICj5tr9hcc"
-                    }
-                ],
-                index: null
-            }
+import MouseMove from "../animation/MouseMove";
+export default {
+    components: {
+        MouseMove,
+    },
+    data() {
+        return {
+            items: [
+                {
+                    src: "https://www.youtube.com/watch?v=PICj5tr9hcc"
+                }
+            ],
+            index: null
         }
     }
+}
 </script>

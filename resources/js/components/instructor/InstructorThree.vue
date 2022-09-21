@@ -4,7 +4,7 @@
             <div class="thumbnail-wrap">
                 <div class="thumbnail">
                     <a to="/instructor/instructor-profile">
-                        <img :src="'/images/team/team-02/'+instructor.imgSrc" :alt="(instructor.name) + ' Thumbnail'" />
+                        <img :src="instructor.photo" :alt="(instructor.name) + ' Thumbnail'" />
                     </a>
                 </div>
                 <ul class="team-share-info">
@@ -19,7 +19,7 @@
                 <h5 class="title">
                     <a to="/instructor/instructor-profile">{{ instructor.name }}</a>
                 </h5>
-                <span class="designation">{{ instructor.designation }}</span>
+                <span class="designation">{{ instructor.instructor.specialization }}</span>
             </div>
         </div>
     </div>

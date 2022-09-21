@@ -5,7 +5,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title> @yield('title', 'Home') - SOT</title>
+    <title> @yield('title', 'School Of Technologies') - SOT</title>
+    <meta name="description"
+        content="School Of Technologes, SOT, Web Development, Mobile App Development, Graphic Designing, Wordpress Development, Amazon Virtual Assistant, Online Courses, Phsyical Classes" />
     <link href="{{ mix('css/app.css') }}" type="text/css" rel="stylesheet" />
 
 </head>
@@ -20,6 +22,8 @@
                 :courses="{{ $courses }}" :qualifications="{{ $qualifications }}" />
         @elseif ($page == 'contact-us')
             <contactus-page />
+        @elseif ($page == 'about-us')
+            <aboutus-page :instructors="{{ $instructors }}" />
         @elseif ($page == 'courses')
             <courses-page :courses="{{ $courses }}" />
         @endif

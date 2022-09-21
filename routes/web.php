@@ -30,6 +30,7 @@ Route::get('/register/{slug?}', [WebController::class, 'getRegister']);
 Route::post('/register', [WebController::class, 'register']);
 
 Route::get('/courses', [WebController::class, 'courses']);
+Route::get('/about-us', [WebController::class, 'aboutUs']);
 Route::get('/contact-us', [WebController::class, 'contactUs']);
 // Route::get('/', [WebController::class, 'index']);
 Route::resource('students', StudentController::class);

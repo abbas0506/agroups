@@ -7,7 +7,7 @@
                 </div>
                 <ul class="edu-breadcrumb">
                     <li class="breadcrumb-item">
-                        <a to="/" class="breadcrumb-item">Home</a>
+                        <a hre="/" class="breadcrumb-item">Home</a>
                     </li>
                     <li class="separator"><i class="icon-angle-right"></i></li>
                     <li class="breadcrumb-item active" aria-current="page">{{ pageTitle }}</li>

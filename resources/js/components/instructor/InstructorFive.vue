@@ -3,7 +3,7 @@
         <div class="inner">
             <div class="thumbnail-wrap">
                 <div class="thumbnail">
-                    <a to="/instructor/instructor-profile">
+                    <a href="/instructor/instructor-profile">
                         <img :src="'/images/team/team-02/'+instructor.imgSrc" :alt="(instructor.name) + ' Thumbnail'" />
                     </a>
                 </div>

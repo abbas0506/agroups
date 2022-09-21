@@ -3,43 +3,50 @@
 
         <HeaderOne />
 
-        <BreadCrumbOne pageTitle='About Us 2' title='A Large Range of Course Learning Paths' />
+        <BreadCrumbThree title='About Us' />
 
-        <Features />
-
-        <VideoSection />
-
-        <Logo />
-
-        <Testimonial />
+        <About />
 
         <FunFact />
 
-        <Instructor />
+        <WhyChoose />
 
-        <CTA addClassName="university-cta-wrapper" btnClass="btn-secondary" />
+        <ContactInfo />
 
-        <FooterOne />
+        <Instructor :instructors="instructors" />
+
+        <!-- <Testimonial /> -->
+
+        <FooterTwo />
     </div>
 </template>
 
 <script>
+import HeaderOne from '../components/header/HeaderOne';
+import BreadCrumbThree from '../components/common/BreadCrumbThree';
+import About from '../components/about-us-three/About';
+import FunFact from '../components/about-us-three/FunFact';
+import WhyChoose from '../components/about-us-three/WhyChoose';
+import ContactInfo from '../components/about-us-three/ContactInfo';
+import Instructor from '../components/about-us-three/Instructor';
+import Testimonial from '../components/about-us-three/Testimonial';
+import FooterTwo from '../components/footer/FooterTwo';
 export default {
     components: {
-        HeaderOne: () => import("@/components/header/HeaderOne"),
-        BreadCrumbOne: () => import('@/components/common/BreadCrumbOne'),
-        Features: () => import('@/components/about-us-two/Features'),
-        VideoSection: () => import('@/components/about-us-two/Video'),
-        Logo: () => import('@/components/about-us-two/Logo'),
-        Testimonial: () => import("@/components/about-us-two/Testimonial"),
-        FunFact: () => import('@/components/about-us-two/FunFact'),
-        Instructor: () => import('@/components/about-us-two/Instructor'),
-        CTA: () => import("@/components/cta/CTAOne"),
-        FooterOne: () => import("@/components/footer/FooterOne")
+        HeaderOne,
+        BreadCrumbThree,
+        About,
+        FunFact,
+        WhyChoose,
+        ContactInfo,
+        Instructor,
+        Testimonial,
+        FooterTwo,
     },
+    props: ['instructors'],
     head() {
         return {
-            title: 'About Us 2'
+            title: 'About Us 3'
         }
     }
 }

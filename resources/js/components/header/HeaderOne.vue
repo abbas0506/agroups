@@ -60,11 +60,11 @@
 </template>
 
 <script>
-import HeaderTopOne from '../header/HeaderTopOne.vue'
-import Category from '../header/Category.vue'
-import Navigation from '../header/Navigation.vue'
-import SearchPopUp from '../header/SearchPopUp.vue'
-import OffCanvasMobileMenuOne from '../header/OffCanvasMobileMenuOne.vue'
+import HeaderTopOne from './HeaderTopOne.vue'
+import Category from './Category'
+import Navigation from './Navigation'
+import SearchPopUp from './SearchPopUp'
+import OffCanvasMobileMenuOne from './OffCanvasMobileMenuOne'
 export default {
     components: {
         HeaderTopOne,

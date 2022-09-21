@@ -3,7 +3,10 @@
         <div class="container edublink-animated-shape">
             <div class="row justify-content-center">
                 <div class="col-lg-6">
-                    <SectionTitle preTitle='Testimonials' title='What Our <span class="color-secondary">Students</span> <br> Have To Say' subTitle='Lorem ipsum dolor sit amet consectur adipiscing elit sed eiusmod tempor incidid unt labore dolore magna aliquaenim minim.' alignment='section-center' />
+                    <SectionTitle preTitle='Testimonials'
+                        title='What Our <span class="color-secondary">Students</span> <br> Have To Say'
+                        subTitle='Lorem ipsum dolor sit amet consectur adipiscing elit sed eiusmod tempor incidid unt labore dolore magna aliquaenim minim.'
+                        alignment='section-center' />
                 </div>
             </div>
             <swiper class="testimonial-activation swiper" :options="swiperOptions">
@@ -11,7 +14,8 @@
                     <div class="testimonial-slide">
                         <div class="content">
                             <div class="logo"><img src="/images/testimonial/logo-01.png" alt="Logo"></div>
-                            <p>Lorem ipsum dolor amet consectur elit adicing elit sed do umod tempor ux incididunt enim ad minim veniam quis nosrud citation laboris nisiste aliquip comodo perspiatix.</p>
+                            <p>Lorem ipsum dolor amet consectur elit adicing elit sed do umod tempor ux incididunt enim
+                                ad minim veniam quis nosrud citation laboris nisiste aliquip comodo perspiatix.</p>
                             <div class="rating-icon">
                                 <i class="icon-23"></i>
                                 <i class="icon-23"></i>
@@ -35,7 +39,8 @@
                     <div class="testimonial-slide">
                         <div class="content">
                             <div class="logo"><img src="/images/testimonial/logo-02.png" alt="Logo"></div>
-                            <p>Lorem ipsum dolor amet consectur elit adicing elit sed do umod tempor ux incididunt enim ad minim veniam quis nosrud citation laboris nisiste aliquip comodo perspiatix.</p>
+                            <p>Lorem ipsum dolor amet consectur elit adicing elit sed do umod tempor ux incididunt enim
+                                ad minim veniam quis nosrud citation laboris nisiste aliquip comodo perspiatix.</p>
                             <div class="rating-icon">
                                 <i class="icon-23"></i>
                                 <i class="icon-23"></i>
@@ -59,7 +64,8 @@
                     <div class="testimonial-slide">
                         <div class="content">
                             <div class="logo"><img src="/images/testimonial/logo-03.png" alt="Logo"></div>
-                            <p>Lorem ipsum dolor amet consectur elit adicing elit sed do umod tempor ux incididunt enim ad minim veniam quis nosrud citation laboris nisiste aliquip comodo perspiatix.</p>
+                            <p>Lorem ipsum dolor amet consectur elit adicing elit sed do umod tempor ux incididunt enim
+                                ad minim veniam quis nosrud citation laboris nisiste aliquip comodo perspiatix.</p>
                             <div class="rating-icon">
                                 <i class="icon-23"></i>
                                 <i class="icon-23"></i>
@@ -83,7 +89,8 @@
                     <div class="testimonial-slide">
                         <div class="content">
                             <div class="logo"><img src="/images/testimonial/logo-02.png" alt="Logo"></div>
-                            <p>Lorem ipsum dolor amet consectur elit adicing elit sed do umod tempor ux incididunt enim ad minim veniam quis nosrud citation laboris nisiste aliquip comodo perspiatix.</p>
+                            <p>Lorem ipsum dolor amet consectur elit adicing elit sed do umod tempor ux incididunt enim
+                                ad minim veniam quis nosrud citation laboris nisiste aliquip comodo perspiatix.</p>
                             <div class="rating-icon">
                                 <i class="icon-23"></i>
                                 <i class="icon-23"></i>
@@ -107,8 +114,10 @@
             <div class="swiper-pagination"></div>
 
             <ul class="shape-group">
-                <MouseMove addClassName="shape-1" dataDepth="1.4" imgSrc="/images/about/shape-30.png" data-aos-delay="200" data-aos="fade" data-aos-duration="1000" />
-                <MouseMove addClassName="shape-2" dataDepth="-1.4" imgSrc="/images/about/shape-25.png" data-aos-delay="200" data-aos="fade" data-aos-duration="1000" />
+                <MouseMove addClassName="shape-1" dataDepth="1.4" imgSrc="/images/about/shape-30.png"
+                    data-aos-delay="200" data-aos="fade" data-aos-duration="1000" />
+                <MouseMove addClassName="shape-2" dataDepth="-1.4" imgSrc="/images/about/shape-25.png"
+                    data-aos-delay="200" data-aos="fade" data-aos-duration="1000" />
             </ul>
         </div>
         <ul class="shape-group">
@@ -120,45 +129,47 @@
 </template>
 
 <script>
-    export default {
-        components: {
-            SectionTitle: () => import('@/components/common/SectionTitle'),
-            MouseMove: () => import('@/components/animation/MouseMove')
-        },
-        data () {
-            return {
-                swiperOptions: {
-                    slidesPerView: 1,
-                    spaceBetween: 0,
-                    loop: true,
-                    grabCursor: true,
-                    speed: 1000,
-                    autoplay: {
-                        delay: 3000
+import SectionTitle from '../common/SectionTitle';
+import MouseMove from '../animation/MouseMove';
+export default {
+    components: {
+        SectionTitle,
+        MouseMove,
+    },
+    data() {
+        return {
+            swiperOptions: {
+                slidesPerView: 1,
+                spaceBetween: 0,
+                loop: true,
+                grabCursor: true,
+                speed: 1000,
+                autoplay: {
+                    delay: 3000
+                },
+                breakpoints: {
+                    768: {
+                        slidesPerView: 2
                     },
-                    breakpoints: {
-                        768: {
-                            slidesPerView: 2
-                        },
-                        992: {
-                            slidesPerView: 3
-                        }
-                    },
-                    pagination: {
-                        el: '.swiper-pagination',
-                        type: 'bullets',
-                        clickable: true
+                    992: {
+                        slidesPerView: 3
                     }
+                },
+                pagination: {
+                    el: '.swiper-pagination',
+                    type: 'bullets',
+                    clickable: true
                 }
             }
         }
     }
+}
 </script>
 
 <style lang="scss">
-    .testimonial-area-2 {
-        .swiper-pagination {
-            text-align: center;
-        }
+.testimonial-area-2 {
+    .swiper-pagination {
+        text-align: center;
     }
+}
 </style>
