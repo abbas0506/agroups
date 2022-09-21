@@ -12,7 +12,7 @@
                             <i :class="category.icon"></i>
                         </div>
                         <div class="content">
-                            <a :href="'/categories/'+category.slug">
+                            <a href="#">
                                 <h5 class="title">{{ category.name }}</h5>
                             </a>
                         </div>
