@@ -72,14 +72,14 @@
             </ul> -->
         </li>
 
-        <li class=""><a href="/blog">Blog</a>
-            <!-- <ul class="submenu">
+        <!-- <li class=""><a href="/blog">Blog</a> -->
+        <!-- <ul class="submenu">
                 <li><a href="/blog/blog-standard">Blog Standard</a></li>
                 <li><a href="/blog/blog-masonry">Blog Masonry</a></li>
                 <li><a href="/blog/blog-list">Blog List</a></li>
                 <li><a href="/blog/blog-details">Blog Details</a></li>
             </ul> -->
-        </li>
+        <!-- </li> -->
         <li class=""><a href="/contact-us">Contact</a>
             <!-- <ul class="submenu">
                 <li><a href="/contact-us">Contact Us</a></li>

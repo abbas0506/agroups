@@ -28,8 +28,8 @@
                             <h4 class="widget-title">Online Platform</h4>
                             <div class="inner">
                                 <ul class="footer-link link-hover">
-                                    <li><a to="/about-us-one">About</a></li>
-                                    <li><a to="/course/course-one">Courses</a></li>
+                                    <li><a href="/about-us">About</a></li>
+                                    <li><a href="/courses">Courses</a></li>
                                     <!-- <li><a to="/pricing-table">Pricing Plan</a></li> -->
                                     <!-- <li><a to="/instructor/instructor-one">Instructor</a></li> -->
                                     <!-- <li><a to="/event/event-grid">Events</a></li> -->
@@ -46,9 +46,9 @@
                                     <!-- <li><a to="/faq">FAQ's</a></li> -->
                                     <!-- <li><a to="/gallery-grid">Gallery</a></li> -->
                                     <!-- <li><a to="/blog/blog-standard">News & Articles</a></li> -->
-                                    <li><a to="/privacy-policy">Privacy Policy</a></li>
+                                    <li><a href="/privacy-policy">Privacy Policy</a></li>
                                     <!-- <li><a to="/my-account">Sign In</a></li> -->
-                                    <li><a to="/contact-us">Contact Us</a></li>
+                                    <li><a href="/contact-us">Contact Us</a></li>
                                 </ul>
                             </div>
                         </div>

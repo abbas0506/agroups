@@ -1,19 +1,19 @@
 <template>
     <ul class="edublink-mobile-menu mainmenu">
         <li v-for='(link, i) in menus' :key='i'>
-            <a :to="link.url" v-html="link.title"></a>
+            <a :href="link.url" v-html="link.title"></a>
             <span class="submenu-toggle" v-if="link.submenu">
                 <i class="ri-arrow-down-s-line"></i>
             </span>
             <ul class="submenu-wrapper" v-if="link.submenu">
                 <li v-for='(link, i) in link.submenu' :key='i' class="title">
-                    <a :to="link.url" v-html="link.title"></a>
+                    <a :href="link.url" v-html="link.title"></a>
                     <span class="submenu-toggle" v-if="link.submenu">
                         <i class="ri-arrow-down-s-line"></i>
                     </span>
                     <ul class="submenu-wrapper" v-if="link.submenu">
                         <li v-for='(link, i) in link.submenu' :key='i'>
-                            <a :to="link.url" v-html="link.title"></a>
+                            <a :href="link.url" v-html="link.title"></a>
                         </li>
                     </ul>
                 </li>

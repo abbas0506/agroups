@@ -10,7 +10,7 @@
                         <p>School to Equip the Learners with knowledge & Skills that will Boost their full Potential.
                         </p>
                         <div class="banner-btn">
-                            <a to="/course/course-one" class="edu-btn">
+                            <a href="/courses/" class="edu-btn">
                                 Find courses <i class="icon-4"></i>
                             </a>
                         </div>
