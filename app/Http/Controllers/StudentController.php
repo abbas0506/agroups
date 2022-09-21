@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Mail\StudentRegister;
 use App\Models\Course;
 use App\Models\Group;
 use App\Models\Registration;
@@ -10,7 +11,9 @@ use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Str;
 use Exception;
+use Illuminate\Support\Facades\Mail;
 
 class StudentController extends Controller
 {
@@ -47,45 +50,47 @@ class StudentController extends Controller
         //
         $request->validate([
             'name' => 'required',
-            'phone' => 'required',
+            'phone' => 'required|min:11|max:11',
             'email' => 'required|unique:users',
             'address' => 'required',
-            'gender' => 'required',
-            'birthdate' => 'required',
-            'qualification' => 'required',
+            'dob' => 'required',
             'course_id' => 'required',
+            'qualification' => 'required',
         ]);
 
         DB::beginTransaction();
         try {
-
+            $password = Str::random(8);
+            $user = User::where('email', $request->email)->first();
             $user = new User;
             $user->name = $request->name;
             $user->phone = $request->phone;
             $user->email = $request->email;
-            $user->password = Hash::make('password');
-            $user->role_id = 4; //student
+            $user->password = Hash::make($password);
+            $user->role_id = 5;
             $user->save();
 
             $student = new Student;
             $student->user_id = $user->id;
-            $student->gender = $request->gender;
-            $student->qualification = $request->qualification;
+            $student->registration = Str::random(5);
             $student->address = $request->address;
-            $student->birthdate = $request->birthdate;
+            $student->birthdate = $request->dob;
+            $student->qualification_id = $request->qualification;
             $student->save();
 
-            $registration = new Registration;
-            $registration->student_id = $student->id;
-            $registration->course_id = $request->course_id;
-            $registration->save();
-
+            $group = Group::where('course_id', $request->course_id)->where('status', 1)->orderBy('id', 'desc')->first();
+            if ($group) {
+                $registration = new Registration;
+                $registration->student_id = $student->id;
+                $registration->group_id = $group->id;
+                $registration->save();
+            }
             DB::commit();
-            return redirect('registration.success')->with('success', 'Successfully created');
+            Mail::to($user)->queue(new StudentRegister($user));
+            return response()->json(['message' => 'Registration done successfully']);
         } catch (Exception $e) {
             Db::rollBack();
-            return redirect()->back()->withErrors($e->getMessage());
-            // something went wrong
+            return response()->json(['error' => $e->getMessage()]);
         }
     }
 

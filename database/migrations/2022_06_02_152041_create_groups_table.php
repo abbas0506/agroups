@@ -15,17 +15,16 @@ class CreateGroupsTable extends Migration
     {
         Schema::create('groups', function (Blueprint $table) {
             $table->id();
-            $table->char('code', 10)->unique();
-            $table->string('title');
-            $table->longText('body');
+            $table->char('code', 10);
+            $table->string('name');
+            $table->longText('description')->nullable();
             $table->unsignedBigInteger('course_id');
             $table->unsignedBigInteger('instructor_id');
             $table->date('startdate')->nullable();
-            $table->date('enddate')->nullable();
             $table->boolean('status')->default(0); // 0 for inactive 1 = active
+            $table->unsignedTinyInteger('type')->default(0); // 0-Physical, 1-Online, 2-Physical+Online, 3-Recorded
             $table->unsignedInteger('fee')->default(6000);
             $table->unsignedInteger('discount')->default(0);
-            $table->unsignedTinyInteger('duration');
             $table->foreign('course_id')
                 ->references('id')
                 ->on('courses')

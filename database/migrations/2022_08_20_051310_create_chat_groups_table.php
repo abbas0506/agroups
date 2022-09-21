@@ -20,6 +20,7 @@ class CreateChatGroupsTable extends Migration
             $table->string('title');
             $table->string('status');
             $table->timestamps();
+            $table->foreign('creator_id')->references('id')->on('users');
         });
     }
 

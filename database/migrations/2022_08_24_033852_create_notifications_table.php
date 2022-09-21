@@ -20,8 +20,8 @@ class CreateNotificationsTable extends Migration
             $table->string('body');
             $table->json('data');
             $table->boolean('is_read')->default(false);
-            $table->foreign('user_id')->references('id')->on('users');
             $table->timestamps();
+            $table->foreign('user_id')->references('id')->on('users');
         });
     }
 

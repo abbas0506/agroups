@@ -24,6 +24,9 @@ class CreateVouchersTable extends Migration
             $table->unsignedMediumInteger('discount')->default(0);
             $table->boolean('status')->default(0);
             $table->timestamps();
+            $table->foreign('user_id')->references('id')->on('users');
+            $table->foreign('student_id')->references('id')->on('students');
+            $table->foreign('registration_id')->references('id')->on('registrations');
         });
     }
 

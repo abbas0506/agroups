@@ -14,7 +14,7 @@ class Course extends Model
         'duration',
     ];
 
-    protected $appends = ['student_count'];
+    // protected $appends = ['student_count'];
     public $timestamps = false;
 
     public function students()

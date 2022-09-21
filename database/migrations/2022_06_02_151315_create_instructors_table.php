@@ -16,17 +16,18 @@ class CreateInstructorsTable extends Migration
         Schema::create('instructors', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('user_id');
-            $table->string('gender');
+            $table->unsignedTinyInteger('gender')->default(1);
             $table->string('address');
             $table->string('specialization')->nullable();
+            $table->longText('about')->nullable();
             $table->string('experience')->nullable();
-            $table->foreign('user_id')
-                ->references('id')
-                ->on('users')
-                ->onUpdate('cascade')
-                ->onDelete('cascade');
-
+            $table->string('facebook')->nullable();
+            $table->string('instagram')->nullable();
+            $table->string('twitter')->nullable();
+            $table->string('youtube')->nullable();
+            $table->string('linkedin')->nullable();
             $table->timestamps();
+            $table->foreign('user_id')->references('id')->on('users');
         });
     }
 

@@ -17,6 +17,8 @@ class CreateChatGroupUsersTable extends Migration
             $table->unsignedBigInteger('chat_group_id');
             $table->unsignedBigInteger('user_id');
             $table->timestamps();
+            $table->foreign('chat_group_id')->references('id')->on('chat_groups');
+            $table->foreign('user_id')->references('id')->on('users');
         });
     }
 

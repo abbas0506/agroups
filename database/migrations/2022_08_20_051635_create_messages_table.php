@@ -20,6 +20,7 @@ class CreateMessagesTable extends Migration
             $table->unsignedTinyInteger('type')->default(1);
             $table->morphs('messageable');
             $table->timestamps();
+            $table->foreign('user_id')->references('id')->on('users');
         });
     }
 

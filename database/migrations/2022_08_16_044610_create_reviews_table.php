@@ -18,8 +18,11 @@ class CreateReviewsTable extends Migration
             $table->unsignedBigInteger('user_id');
             $table->float('rating')->default(5);
             $table->string('body');
+            $table->char('type', 10)->default('class');
             $table->morphs('reviewable');
             $table->timestamps();
+
+            $table->foreign('user_id')->references('id')->on('users');
         });
     }
 

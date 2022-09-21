@@ -15,11 +15,20 @@ class CreateCoursesTable extends Migration
     {
         Schema::create('courses', function (Blueprint $table) {
             $table->id();
+            $table->unsignedBigInteger('category_id');
             $table->char('code', 10)->unique();
-            $table->string('title');
-            $table->longText('body');
+            $table->char('slug', 100)->unique();
+            $table->string('name');
+            $table->text('short_description')->nullable();
+            $table->longText('description')->nullable();
+            $table->boolean('paid')->default(1);
+            $table->char('level')->default('Medium');
+            $table->unsignedTinyInteger('duration')->default(48); // weeks
+            $table->string('icon')->nullable();
             $table->string('logo')->default("https://seeklogo.com/images/L/laravel-logo-41EC1D4C3F-seeklogo.com.png");
+            $table->unsignedTinyInteger('index')->default(1);
             $table->timestamps();
+            $table->foreign('category_id')->references('id')->on('categories');
         });
     }
 

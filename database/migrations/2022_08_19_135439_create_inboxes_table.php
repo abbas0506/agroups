@@ -22,6 +22,7 @@ class CreateInboxesTable extends Migration
             $table->unsignedBigInteger('sender_id')->nullable();
             $table->string('type');
             $table->timestamps();
+
             $table->foreign('user1_id')->references('id')->on('users');
             $table->foreign('user2_id')->references('id')->on('users');
         });
