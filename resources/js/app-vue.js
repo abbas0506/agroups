@@ -1,5 +1,6 @@
 require('./bootstrap');
 require('./scrollToTop');
+require('./mobileMenuResponsive');
 import { createApp } from 'vue'
 const app = createApp({})
 
@@ -32,7 +33,7 @@ import AboutUsPage from './pages/about-us'
 import ContactUsPage from './pages/contact-us'
 
 app.use(VueObserveVisibility)
-// app.use(VueAwesomeSwiper)
+app.use(VueAwesomeSwiper)
 app.use(VueSweetalert2)
 // app.use(InlineSvgPlugin)
 // app.use(VueMasonry)

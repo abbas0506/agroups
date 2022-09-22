@@ -74,7 +74,7 @@ button {
             content: "";
             height: 100%;
             width: 0;
-            background: linear-gradient(-90deg, #F5A21F 0%, rgba(37, 72, 130, 1) 100%);
+            background: var(--color-secondary);
             border-radius: 5px;
             position: absolute;
             top: 0;

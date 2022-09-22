@@ -6,7 +6,7 @@
                     <div class="col-lg-6">
                         <div class="about-image-gallery">
                             <img class="main-img-1" src="/images/about/about-01.jpg" alt="About Image">
-                            <div class="video-box">
+                            <!-- <div class="video-box">
                                 <div class="inner">
                                     <div class="thumb">
                                         <img src="/images/about/about-02.webp" alt="About Image">
@@ -21,7 +21,7 @@
                                         <span></span>
                                     </div>
                                 </div>
-                            </div>
+                            </div> -->
                             <div class="award-status bounce-slide">
                                 <div class="inner">
                                     <div class="icon">
@@ -65,7 +65,7 @@
                 </ul>
             </div>
         </div>
-        <CoolLightBox :items="items" :index="index" @close="index = null">
+        <CoolLightBox :index="1" :items="items">
         </CoolLightBox>
     </div>
 </template>
@@ -84,7 +84,7 @@ export default {
     data() {
         return {
             items: [
-                "https://www.youtube.com/watch?v=PICj5tr9hcc",
+                { src: "https://www.youtube.com/watch?v=PICj5tr9hcc", }
             ],
             index: null
         }

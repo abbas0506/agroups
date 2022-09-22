@@ -29,6 +29,14 @@ Route::get('courses', function () {
     return response($courses);
 });
 
+Route::get('course/{id}/students', function ($id) {
+    $users = User::with(['student' => function ($q) {
+        $q->with(['registrations']);
+    }])->where('role_id', 5)->get();
+    return response($users);
+});
+
+
 
 Route::get('course/{id}/students', function ($id) {
     return response([]);
