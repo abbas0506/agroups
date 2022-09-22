@@ -9,6 +9,7 @@
     <meta name="description"
         content="School Of Technologes, SOT, Web Development, Mobile App Development, Graphic Designing, Wordpress Development, Amazon Virtual Assistant, Online Courses, Phsyical Classes" />
     <link href="{{ mix('css/app.css') }}" type="text/css" rel="stylesheet" />
+    <link rel="icon" type="image/x-icon" href="favicon.png">
 
 </head>
 
