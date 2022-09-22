@@ -29,11 +29,11 @@ Route::get('courses', function () {
     return response($courses);
 });
 
-Route::get('/students', function ($id) {
+Route::get('/students', function () {
     $users = User::with(['student' => function ($q) {
-        $q->with(['registrations']);
+        $q->with(['groups.course']);
     }])->where('role_id', 5)->get();
-    return response($users);
+    return response()->json($users);
 });
 
 

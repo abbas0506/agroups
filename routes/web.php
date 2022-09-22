@@ -4,6 +4,8 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\WebController;
 use App\Http\Controllers\StudentController;
 use App\Mail\StudentRegister;
+use App\Mail\StudentRegisterAdmin;
+use App\Models\Course;
 use App\Models\User;
 use Illuminate\Support\Facades\Mail;
 
@@ -19,8 +21,9 @@ use Illuminate\Support\Facades\Mail;
 */
 
 Route::get('email', function () {
-    $user = User::find(1);
-    return Mail::to($user)->queue(new StudentRegister($user));
+    $user = User::find(14);
+    $course = Course::find(2);
+    return Mail::to('schooloftechnologies@gmail.com')->queue(new StudentRegisterAdmin($user, $course));
 });
 
 

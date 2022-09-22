@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Mail\StudentRegister;
+use App\Mail\StudentRegisterAdmin;
 use App\Models\Course;
 use App\Models\Group;
 use App\Models\Registration;
@@ -87,6 +88,7 @@ class StudentController extends Controller
             }
             DB::commit();
             Mail::to($user)->queue(new StudentRegister($user));
+            Mail::to('schooloftechnologies@gmail.com')->queue(new StudentRegisterAdmin($user, Course::find($request->course_id)));
             return response()->json(['message' => 'Registration done successfully']);
         } catch (Exception $e) {
             Db::rollBack();
