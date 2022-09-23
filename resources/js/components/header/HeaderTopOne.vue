@@ -4,12 +4,12 @@
             <div class="header-top">
                 <div class="header-top-left">
                     <div class="header-notify">
-                        Orphen get 50% discount. <a href="/regiter">Hurry up!</a>
+                        Orphen get 50% discount. <a href="/register">Hurry up!</a>
                     </div>
                 </div>
                 <div class="header-top-right">
                     <ul class="header-info">
-                        <li><a href="/login">Login</a></li>
+                        <!-- <li><a href="/login">Login</a></li> -->
                         <li><a href="/register">Register</a></li>
                         <li><a href="tel:+923021073000"><i class="icon-phone"></i>Call: 0302 1073000</a></li>
                         <li><a href="mailto:schooloftechnologies@gmail.com" target="_blank"><i

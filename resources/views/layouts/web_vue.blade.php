@@ -3,11 +3,17 @@
 
 <head>
     <meta charset="utf-8">
+    <title> @yield('title', 'School Of Technologies') - SOT</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="google-site-verification" content="8eifeekuWZJchWMACTD4mdVASieejCossoBoomiNt18" />
-    <title> @yield('title', 'School Of Technologies') - SOT</title>
     <meta name="description"
         content="School Of Technologies Institute for skill development programs, Where you can learn most demanding skill for freelancing by Online Courses or Physical Classes" />
+    <meta property="og:title" content="School Of Technologies">
+    <meta property="og:description"
+        content="School Of Technologies Institute for skill development programs, Where you can learn most demanding skill for freelancing by Online Courses or Physical Classes.">
+    <meta property="og:image" content="{{ url('/images/logo/logo-dark.png') }}">
+    <meta property="og:url" content="{{ url('/') }}">
+    <meta name="twitter:card" content="{{ url('/images/logo/logo-dark.png') }}">
     <link href="{{ mix('css/app.css') }}" type="text/css" rel="stylesheet" />
     <link rel="icon" type="image/x-icon" href="favicon.png">
 
