@@ -64,4 +64,9 @@ class WebController extends Controller
         $data['instructors'] = User::where('role_id', 4)->with('instructor')->take(4)->inRandomOrder()->get();
         return view('layouts.web_vue', $data);
     }
+
+    public function sitemap()
+    {
+        return response()->view('web.sitemap')->header('Content-Type', 'text/xml');
+    }
 }

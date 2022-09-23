@@ -38,3 +38,5 @@ Route::get('/contact-us', [WebController::class, 'contactUs']);
 // Route::get('/', [WebController::class, 'index']);
 Route::resource('students', StudentController::class);
 Route::view('registration.success', 'students.success');
+
+Route::get('/sitemap.xml', [WebController::class, 'sitemap']);
