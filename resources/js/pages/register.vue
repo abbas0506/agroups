@@ -120,7 +120,7 @@ export default {
         MouseMove,
     },
     mounted() {
-        this.course = this.course_id ?? '1';
+        this.course = this.course_id ?? 5;
     },
     data() {
         return {

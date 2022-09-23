@@ -27,7 +27,7 @@ class WebController extends Controller
         $data = [
             'page' => 'register',
             'course' => null,
-            'courses' => Course::all(),
+            'courses' => Course::orderBy('name')->get(),
             'qualifications' => Qualification::all(),
         ];
         if ($slug) {
