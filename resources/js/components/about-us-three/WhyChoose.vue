@@ -48,21 +48,21 @@ export default {
                     title: "High Quality Courses",
                     details: "Top demanind course/skills right now in the markeet.",
                     iconClass: "icon-45",
-                    imgSrc: "why-choose-03.webp",
+                    imgSrc: "why-choose-03.jpg",
                     colorClass: "color-primary-style"
                 },
                 {
                     title: "Life Time Access",
                     details: "We will provide full support for the rest of life.",
                     iconClass: "icon-46",
-                    imgSrc: "why-choose-04.webp",
+                    imgSrc: "why-choose-04.jpg",
                     colorClass: "color-secondary-style"
                 },
                 {
                     title: "Expert Instructors",
                     details: "We have great full freelancers team for you.",
                     iconClass: "icon-47",
-                    imgSrc: "why-choose-05.webp",
+                    imgSrc: "why-choose-05.jpg",
                     colorClass: "color-extra08-style"
                 }
             ]

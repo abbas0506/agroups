@@ -37,17 +37,17 @@
                                 </div>
                                 <div class="thumbnail thumbnail-4" data-aos-delay="50" data-aos="fade-up"
                                     data-aos-duration="1000">
-                                    <img src="/images/about/about-15.webp" alt="About Images">
+                                    <img src="/images/about/about-15.jpg" alt="About Images">
                                 </div>
                             </div>
                             <div class="col-6 masonry-item">
                                 <div class="thumbnail thumbnail-2 mb--30" alt="About Images" data-aos-delay="50"
                                     data-aos="fade-down" data-aos-duration="1000">
-                                    <img src="/images/about/about-14.webp">
+                                    <img src="/images/about/about-14.jpg">
                                 </div>
                                 <div class="thumbnail thumbnail-4" alt="About Images" data-aos-delay="50"
                                     data-aos="fade-up" data-aos-duration="1000">
-                                    <img src="/images/about/about-16.webp" alt="About Images">
+                                    <img src="/images/about/about-16.jpg" alt="About Images">
                                 </div>
                             </div>
                         </div>
