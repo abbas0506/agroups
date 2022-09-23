@@ -7,7 +7,7 @@
 
     <title> @yield('title', 'School Of Technologies') - SOT</title>
     <meta name="description"
-        content="School Of Technologes is a institue for skill development programs, Where you can learn most demanding skill for freelancing by Oline Courses or Phsyical Classes" />
+        content="School Of Technologies is a institute for skill development programs, Where you can learn most demanding skill for freelancing by Online Courses or Physical Classes" />
     <link href="{{ mix('css/app.css') }}" type="text/css" rel="stylesheet" />
     <link rel="icon" type="image/x-icon" href="favicon.png">
 
