@@ -2,7 +2,7 @@
     <section class="why-choose-area-4 edu-section-gap">
         <div class="container edublink-animated-shape">
             <SectionTitle preTitle='Why choose edublink'
-                title='The Best <span class="color-secondary">Beneficial</span> Side <br> of EduBlink'
+                title='The Best <span class="color-secondary">Beneficial</span> Side <br> of School Of Technologies'
                 alignment='section-center' />
 
             <div class="row g-5">
