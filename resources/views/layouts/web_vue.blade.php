@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
+    <meta name="google-site-verification" content="8eifeekuWZJchWMACTD4mdVASieejCossoBoomiNt18" />
     <title> @yield('title', 'School Of Technologies') - SOT</title>
     <meta name="description"
         content="School Of Technologies Institute for skill development programs, Where you can learn most demanding skill for freelancing by Online Courses or Physical Classes" />
