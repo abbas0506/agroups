@@ -2,6 +2,8 @@ require('./bootstrap');
 require('./scrollToTop');
 require('./mobileMenuResponsive');
 import { createApp } from 'vue'
+import VueGtag from "vue-gtag";
+
 const app = createApp({})
 
 
@@ -54,4 +56,6 @@ app.component('contactus-page', ContactUsPage)
 // app.component('CoolLightBox', CoolLightBox)
 
 
-app.mount('#app')
+app.use(VueGtag, {
+    config: { id: "G-X1BNXC9Y3T" }
+}).mount('#app')
