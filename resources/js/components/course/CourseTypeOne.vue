@@ -59,7 +59,7 @@
                     <li><i class="icon-24"></i>{{ course.lessons + course.lessons > 1 ? 'Lessons' : 'Lesson' }}</li>
                     <li><i class="icon-25"></i>{{ course.students + course.students ? 'Students' : 'Student' }}</li>
                 </ul>
-                <a :href="'/register/'+course.slug" class="edu-btn btn-secondary btn-small">Enrolled <i
+                <a :href="'/register/'+course.slug" class="edu-btn btn-secondary btn-small">Apply Now<i
                         class="icon-4"></i></a>
             </div>
         </div>

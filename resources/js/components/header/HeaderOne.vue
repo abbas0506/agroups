@@ -39,7 +39,7 @@
                                 </a>
                             </li> -->
                             <li class="header-btn">
-                                <a href="/register" class="edu-btn btn-medium">Get Register <i class="icon-4"></i>
+                                <a href="/register" class="edu-btn btn-medium">Apply Now <i class="icon-4"></i>
                                 </a>
                             </li>
                             <li class="mobile-menu-bar d-block d-xl-none">
