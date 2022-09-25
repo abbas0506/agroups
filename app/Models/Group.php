@@ -8,7 +8,6 @@ use Illuminate\Database\Eloquent\Model;
 class Group extends Model
 {
     use HasFactory;
-
     protected $fillable = [
         'name',
         'course_id',
@@ -25,5 +24,9 @@ class Group extends Model
     {
         return $this->belongsTo(Instructor::class);
     }
-    public $timestamps = false;
+
+    public function registrations()
+    {
+        return $this->hasMany(Registration::class);
+    }
 }

@@ -15,11 +15,20 @@ class Student extends Model
         'address',
         'qualification'
     ];
-    public $timestamps = false;
+
+    protected $hidden = [
+        'created_at',
+        'updated_at',
+    ];
 
     public function user()
     {
         return $this->belongsTo(User::class);
+    }
+
+    public function qualification()
+    {
+        return $this->belongsTo(Qualification::class);
     }
 
     public function groups()

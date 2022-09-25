@@ -17,6 +17,16 @@ class Course extends Model
     // protected $appends = ['student_count'];
     public $timestamps = false;
 
+    public function groups()
+    {
+        return $this->hasMany(Group::class);
+    }
+
+    public function activeGroup()
+    {
+        return $this->hasOne(Group::class)->latest();
+    }
+
     public function students()
     {
         return $this->belongsToMany(Student::class, 'registrations');

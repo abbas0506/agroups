@@ -52,3 +52,11 @@ Route::get('download/{id}/students', function ($id) {
     })->with('user')->get();
     return response($users);
 });
+
+Route::get('/statistics', function () {
+    return Course::with(['groups' => function ($q) {
+        $q->with(['registrations' => function ($r) {
+            $r->with(['student.user', 'student.qualification']);
+        }])->where('status', 1);
+    }])->get();
+});
