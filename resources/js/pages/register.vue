@@ -57,13 +57,13 @@
                                 </div>
                                 <div class="row g-lg-5">
 
-                                    <div class="col-lg-6">
+                                    <div class="col-lg-4">
                                         <div class="form-group">
                                             <label for="log-password">Email*</label>
                                             <input v-model="email" type="text" id="email" placeholder="email">
                                         </div>
                                     </div>
-                                    <div class="col-lg-6">
+                                    <div class="col-lg-4">
                                         <div class="form-group">
                                             <label for="reg-name">Select Qualifications*</label>
                                             <select v-model="qualification">
@@ -71,6 +71,16 @@
                                                     {{
                                                     c.title}}
                                                 </option>
+
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <div class="form-group">
+                                            <label for="reg-name">Select Class Mode*</label>
+                                            <select v-model="class_mode">
+                                                <option value="0">Physical</option>
+                                                <option value="1">Online/Live</option>
 
                                             </select>
                                         </div>
@@ -129,6 +139,7 @@ export default {
             'phone': '',
             'address': '',
             'qualification': 1,
+            'class_mode': '0',
             'course': '',
             'dob': new Date('2000-01-02T00:00').toISOString().slice(0, 10),
             'agreetc': true,
@@ -169,6 +180,7 @@ export default {
                     'address': this.address,
                     'email': this.email,
                     'dob': this.dob,
+                    'mode': this.class_mode,
                 });
                 console.log(res.data);
                 this.$refs.regform.reset();

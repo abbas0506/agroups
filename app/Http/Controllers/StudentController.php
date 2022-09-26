@@ -84,6 +84,7 @@ class StudentController extends Controller
                 $registration = new Registration;
                 $registration->student_id = $student->id;
                 $registration->group_id = $group->id;
+                $registration->class_mode = $request->mode;
                 $registration->save();
             }
             DB::commit();

@@ -19,6 +19,7 @@ class CreateRegistrationsTable extends Migration
             $table->unsignedBigInteger('group_id');
             $table->unsignedMediumInteger('package')->default(0); // Managment can modified 
             $table->boolean('status')->default(1);  //individual status of student: left or on roll
+            $table->tinyInteger('class_mode')->default(0); // 1 Physical , 2 Online
             $table->string('remarks')->nullable();  //special note about student status
             $table->foreign('student_id')
                 ->references('id')
