@@ -11,8 +11,8 @@
                 </div>
                 <div class="header-top-right">
                     <ul class="header-info">
-                        <li><a to="/my-account">Login</a></li>
-                        <li><a to="/my-account">Register</a></li>
+                        <li><a href="/my-account">Login</a></li>
+                        <li><a href="/my-account">Register</a></li>
                         <li class="header-btn"><a to="/contact-us" class="edu-btn btn-secondary btn-medium">Apply Now <i
                                     class="icon-4"></i></a></li>
                     </ul>

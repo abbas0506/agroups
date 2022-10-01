@@ -6,7 +6,6 @@
                 <div class="logo">
                     <a href="/">
                         <img class="logo-light" src="/images/logo/logo-dark.png" alt="Dark Logo">
-                        <img class="logo-dark" src="/images/logo/logo-white.png" alt="Light Logo">
                     </a>
                 </div>
                 <div class="close-menu">

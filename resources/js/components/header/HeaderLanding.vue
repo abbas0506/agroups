@@ -5,9 +5,8 @@
                 <div class="header-navbar">
                     <div class="header-brand">
                         <div class="logo">
-                            <a to="/">
-                                <img class="logo-light" src="/images/logo/logo-dark.png" alt="Dark Logo">
-                                <img class="logo-dark" src="/images/logo/logo-white.png" alt="Light Logo">
+                            <a href="/">
+                                <img class="logo-light" src="/images/logo/logo-dark.png" alt="SOT Logo">
                             </a>
                         </div>
                     </div>
@@ -56,7 +55,6 @@
                     <div class="logo">
                         <a to="/">
                             <img class="logo-light" src="/images/logo/logo-dark.png" alt="Dark Logo">
-                            <img class="logo-dark" src="/images/logo/logo-white.png" alt="Light Logo">
                         </a>
                     </div>
                     <div class="close-menu">

@@ -24,7 +24,7 @@
                 <div class="col-lg-6">
                     <div class="banner-thumbnail">
                         <div class="thumbnail" data-aos-delay="500" data-aos="fade-left" data-aos-duration="1000">
-                            <img src="/images/banner/girl-1.png" alt="Girl Image">
+                            <img src="/images/banner/girl-1.webp" alt="Girl Image">
                         </div>
                         <!-- <div class="instructor-info" data-aos-delay="200" data-aos="fade-up" data-aos-duration="500">
                             <div class="inner">

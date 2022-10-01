@@ -6,9 +6,8 @@
                 <div class="header-navbar">
                     <div class="header-brand">
                         <div class="logo">
-                            <a to="/">
+                            <a href="/">
                                 <img class="logo-light" src="/images/logo/logo-dark-2.png" alt="Dark Logo">
-                                <img class="logo-dark" src="/images/logo/logo-light-2.png" alt="Light Logo">
                             </a>
                         </div>
                     </div>

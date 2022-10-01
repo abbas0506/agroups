@@ -94,8 +94,7 @@
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <button type="button" v-on:click="reigster" class="edu-btn btn-medium">Create
-                                        Account
+                                    <button type="button" v-on:click="reigster" class="edu-btn btn-medium">Register
                                         <i class="icon-4"></i></button>
                                 </div>
                             </form>
